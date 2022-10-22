@@ -1,19 +1,14 @@
 \documentclass[a4paper]{article}
-    \usepackage{fullpage}
-    \usepackage{amssymb}
-    \usepackage{textcomp}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-    \usepackage{hyperref}
-    \usepackage{enumitem}
-    \setlist{nosep}
-    \textheight=10in
-    \pagestyle{empty}
-    \raggedright
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \usepackage{tgschola}
-    \usepackage[left=0.5in,right=0.5in,bottom=0.2in,top=0.2in]{geometry}
+\usepackage{tabu}
+% \usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[left=0.4in,top=0.25in,right=0.4in,bottom=0in]{geometry}
+\usepackage{enumitem}
+\setlist{nosep}
 
 % ----------- Definations -----------
 
@@ -23,7 +18,19 @@
   linkcolor    = blue, %Colour of internal links
 }
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% Adjust margins
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 
 \newcommand{\area} [2] {
     \vspace*{-9pt}
@@ -44,21 +51,38 @@
 
 % ----------- End of definations -----------
 
+
 \begin{document}
+
 % ----------- Profile -----------
+\begin{table}
+    \begin{minipage}{0.15\linewidth}
+        \centering
+        \vspace*{-5mm}
+        \includegraphics[height =1in]{nith.png}
+    \end{minipage}
+    \begin{minipage}{0.10\linewidth}
+        {\centering
+        \setlength{\tabcolsep}{50pt}
+        \def\arraystretch{1.1}
+        \begin{tabular}{ c }
+            \textbf{\Large{ARYAN PATHANIA}}\\
+            \textbf{20bcs020}\\
+            \textbf{Computer Science \& Engineering},  \textbf{B.Tech.} \\
+            National Institute Of Technology, Hamirpur, Himachal, India\\
 
-\begin{center}
-	{\Huge \scshape {Aryan Pathania}}\\
-	\vspace{0.5mm}
-	Himachal, India $\cdot$ \href{mailto: aryan.pathania2003@gmail.com}{aryan.pathania2003@gmail.com} $\cdot$ +91 94592 55020\\
-	\vspace{0.5mm}
-	\href{https://aryanpathania.vercel.app/}{Portfolio} $\cdot$
-	\href{https://linkedin.com/in/aryanpathania03/}{LinkedIn (aryanpathania03)} $\cdot$
-	\href{https://www.github.com/aynp}{GitHub (aynp)} $\cdot$
-	\href{https://www.github.com/aynp}{Codeforces (nand)} \\
-\end{center}
+            Email: {\color{blue}\href{mailto:aryan.pathania2003@gmail.com} {aryan.pathania2003@gmail.com}} $\cdot$ Mobile: +91 94592 55020\\
 
-% \vspace{1.5mm}
+            GitHub: \href{https://www.github.com/aynp}{aynp} $\cdot$
+            Codeforces: \href{https://codeforces.com/profile/nand}{nand} $\cdot$
+            LinkedIn: \href{https://www.linkedin.com/in/aryanpathania03/}{aryanpathania03}
+        \end{tabular}
+        }
+    \end{minipage}\hfill
+\end{table}
+
+\vspace*{-12mm}
+
 % ----------- Education -----------
 
 \header{Education}
